@@ -1,0 +1,69 @@
+Solicitud de Citación:
+Este conjunto de datos está disponible públicamente para investigación. Los detalles se describen en [Moro et al., 2011].
+Por favor, incluya esta cita si planea utilizar esta base de datos:
+
+[Moro et al., 2011] S. Moro, R. Laureano y P. Cortez. Uso de Minería de Datos para Marketing Directo Bancario: Una Aplicación de la Metodología CRISP-DM. En P. Novais et al. (Eds.), Actas de la Conferencia Europea de Simulación y Modelado - ESM'2011, pp. 117-121, Guimarães, Portugal, Octubre, 2011. EUROSIS.
+
+Disponible en: [pdf] http://hdl.handle.net/1822/14838
+[bib] http://www3.dsi.uminho.pt/pcortez/bib/2011-esm-1.txt
+
+Título: Marketing Bancario
+
+Fuentes
+Creado por: Paulo Cortez (Univ. Minho) y Sérgio Moro (ISCTE-IUL) @ 2012
+
+Uso Anterior:
+
+El conjunto de datos completo fue descrito y analizado en:
+
+S. Moro, R. Laureano y P. Cortez. Uso de Minería de Datos para Marketing Directo Bancario: Una Aplicación de la Metodología CRISP-DM. En P. Novais et al. (Eds.), Actas de la Conferencia Europea de Simulación y Modelado - ESM'2011, pp. 117-121, Guimarães, Portugal, Octubre, 2011. EUROSIS.
+
+Información Relevante:
+
+Los datos están relacionados con campañas de marketing directo de una institución bancaria portuguesa.
+Las campañas de marketing se basaron en llamadas telefónicas. A menudo, se requería más de un contacto con el mismo cliente para determinar si el producto (depósito a plazo bancario) sería (o no) suscrito.
+
+Hay dos conjuntos de datos:
+
+bank-full.csv con todos los ejemplos, ordenados por fecha (de mayo de 2008 a noviembre de 2010).
+bank.csv con el 10% de los ejemplos (4521), seleccionados aleatoriamente de bank-full.csv.
+El conjunto de datos más pequeño se proporciona para probar algoritmos de aprendizaje automático que demandan más recursos computacionales (por ejemplo, SVM).
+El objetivo de clasificación es predecir si el cliente suscribirá un depósito a plazo (variable y).
+
+Número de Instancias: 45211 para bank-full.csv (4521 para bank.csv)
+
+Número de Atributos: 16 + atributo de salida.
+
+Información de Atributos:
+
+Para más información, lea [Moro et al., 2011].
+
+Variables de entrada:
+
+Datos del cliente bancario:
+1 - edad (numérico)
+2 - empleo: tipo de empleo (categórico: "admin.","unknown","unemployed","management","housemaid","entrepreneur","student",
+"blue-collar","self-employed","retired","technician","services")
+3 - estado civil: estado civil (categórico: "married","divorced","single"; nota: "divorced" significa divorciado o viudo)
+4 - educación (categórico: "unknown","secondary","primary","tertiary")
+5 - impago: ¿tiene créditos en mora? (binario: "yes","no")
+6 - saldo: saldo medio anual, en euros (numérico)
+7 - hipoteca: ¿tiene préstamo hipotecario? (binario: "yes","no")
+8 - préstamo: ¿tiene préstamo personal? (binario: "yes","no")
+
+Relacionado con el último contacto de la campaña actual:
+9 - contacto: tipo de comunicación del contacto (categórico: "unknown","telephone","cellular")
+10 - día: último día de contacto del mes (numérico)
+11 - mes: último mes de contacto del año (categórico: "jan", "feb", "mar", ..., "nov", "dec")
+12 - duración: duración del último contacto, en segundos (numérico)
+
+Otros atributos:
+13 - campaña: número de contactos realizados durante esta campaña y para este cliente (numérico, incluye el último contacto)
+14 - pdays: número de días que pasaron desde que el cliente fue contactado por última vez en una campaña anterior (numérico, -1 significa que el cliente no fue contactado previamente)
+15 - previous: número de contactos realizados antes de esta campaña y para este cliente (numérico)
+16 - poutcome: resultado de la campaña de marketing anterior (categórico: "unknown","other","failure","success")
+
+Variable de salida (objetivo deseado):
+17 - y - ¿ha suscrito el cliente un depósito a plazo? (binario: "yes","no")
+
+Valores de Atributos Perdidos: Ninguno
